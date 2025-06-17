@@ -1,5 +1,4 @@
-------
-layout: home
+
 title: Tristan Brasov
 ---
 
@@ -23,14 +22,18 @@ I’m a Mechanical Engineering grad from the University of Missouri with hands-o
 .carousel {
   overflow: hidden;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 .carousel-track {
   display: flex;
-  animation: scroll 12s linear infinite;
   gap: 24px;
+  animation: scroll 6s linear infinite;
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
 }
 
 .carousel-track img {
@@ -43,8 +46,3 @@ I’m a Mechanical Engineering grad from the University of Missouri with hands-o
   100% { transform: translateX(-50%); }
 }
 </style>
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
----
