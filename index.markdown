@@ -8,7 +8,9 @@ I’m a Mechanical Engineering grad from the University of Missouri with hands-o
 
 ## 🛠 Software Tools I Use
 
-<div class="carousel">
+## 🛠 Software Tools I Use
+
+<div class="carousel" onmouseover="this.classList.add('pause')" onmouseout="this.classList.remove('pause')">
   <div class="carousel-track">
     <img src="images/matlab-logo.png" alt="MATLAB">
     <img src="images/solidworks-logo.png" alt="SolidWorks">
@@ -18,6 +20,34 @@ I’m a Mechanical Engineering grad from the University of Missouri with hands-o
   </div>
 </div>
 
+<style>
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 5s linear infinite;
+}
+
+.carousel.pause .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-track img {
+  height: 50px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
 <style>
 .carousel {
   overflow: hidden;
