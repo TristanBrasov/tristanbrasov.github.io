@@ -12,12 +12,19 @@ I’m a Mechanical Engineering grad from the University of Missouri with hands-o
     <img src="images/fusion360-logo.png" alt="Fusion 360">
     <img src="images/xfoil-logo.png" alt="XFOIL">
 
-    <!-- Duplicate logos for seamless infinite scroll -->
-    <img src="images/matlab-logo.png" alt="MATLAB clone">
-    <img src="images/solidworks-logo.png" alt="SolidWorks clone">
-    <img src="images/nx-logo.png" alt="NX clone">
-    <img src="images/fusion360-logo.png" alt="Fusion 360 clone">
-    <img src="images/xfoil-logo.png" alt="XFOIL clone">
+    <!-- First duplicate set -->
+    <img src="images/matlab-logo.png" alt="MATLAB clone 1">
+    <img src="images/solidworks-logo.png" alt="SolidWorks clone 1">
+    <img src="images/nx-logo.png" alt="NX clone 1">
+    <img src="images/fusion360-logo.png" alt="Fusion 360 clone 1">
+    <img src="images/xfoil-logo.png" alt="XFOIL clone 1">
+
+    <!-- Second duplicate set -->
+    <img src="images/matlab-logo.png" alt="MATLAB clone 2">
+    <img src="images/solidworks-logo.png" alt="SolidWorks clone 2">
+    <img src="images/nx-logo.png" alt="NX clone 2">
+    <img src="images/fusion360-logo.png" alt="Fusion 360 clone 2">
+    <img src="images/xfoil-logo.png" alt="XFOIL clone 2">
   </div>
 </div>
 
@@ -25,24 +32,24 @@ I’m a Mechanical Engineering grad from the University of Missouri with hands-o
 .carousel {
   overflow: hidden;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   margin: 2rem auto;
 }
 
 .carousel-track {
   display: flex;
   gap: 40px;
-  animation: scroll 10s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 
 .carousel-track img {
-  height: 80px;
+  height: 90px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
 @keyframes scroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-33.33%); }
 }
 </style>
