@@ -10,16 +10,48 @@ I’m a Mechanical Engineering grad from the University of Missouri with hands-o
 
 ## 🛠 Software Tools I Use
 
-<div class="carousel" onmouseover="this.classList.add('pause')" onmouseout="this.classList.remove('pause')">
+## 🛠 Software Tools I Use
+
+<div class="carousel">
   <div class="carousel-track">
     <img src="images/matlab-logo.png" alt="MATLAB">
     <img src="images/solidworks-logo.png" alt="SolidWorks">
     <img src="images/nx-logo.png" alt="NX">
     <img src="images/fusion360-logo.png" alt="Fusion 360">
     <img src="images/xfoil-logo.png" alt="XFOIL">
+
+    <!-- Duplicate logos for seamless loop -->
+    <img src="images/matlab-logo.png" alt="MATLAB (clone)">
+    <img src="images/solidworks-logo.png" alt="SolidWorks (clone)">
+    <img src="images/nx-logo.png" alt="NX (clone)">
+    <img src="images/fusion360-logo.png" alt="Fusion 360 (clone)">
+    <img src="images/xfoil-logo.png" alt="XFOIL (clone)">
   </div>
 </div>
 
+<style>
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  animation: scroll 10s linear infinite;
+}
+
+.carousel-track img {
+  height: 80px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 <style>
 .carousel {
   overflow: hidden;
