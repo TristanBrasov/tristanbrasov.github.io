@@ -16,6 +16,7 @@ I’m a Mechanical Engineering grad from the University of Missouri with hands-o
   <img src="images/fusion360-logo.png" alt="Fusion 360" height="50">
   <img src="images/xfoil-logo.png" alt="XFOIL" height="50">
 </p>
+</p>
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
