@@ -1,0 +1,3 @@
+title: "Tristan Brasov's Portfolio"
+theme: minima
+header_pages: ["about.markdown", "Resume.markdown", "Projects.markdown"]

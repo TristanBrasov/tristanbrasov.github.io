@@ -1,0 +1,141 @@
+---
+---
+
+@import "minima";
+
+/* ===== Header & Layout ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+  border: 0 !important;
+}
+.site-header .wrapper { text-align: center; padding: 8px 0 12px; }
+.site-header .site-title,
+.site-header a.site-title {
+  float: none !important;
+  display: block !important;
+  margin: 22px auto 10px !important;
+  font-size: 2.6rem !important;
+  font-weight: 800 !important;
+  pointer-events: none !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.site-header .site-nav { float: none !important; text-align: center; margin-bottom: 22px; }
+.site-header .site-nav .page-link { display: inline-block; margin: 0 24px; border-bottom: 2px solid transparent; padding-bottom: 2px; }
+.site-header .site-nav .page-link:hover { border-bottom-color: currentColor; }
+.site-footer { border-top: 0 !important; }
+
+.content-centered { max-width: 700px; margin: 0 auto; padding: 20px; }
+.content-centered h2 { text-align: center; margin-bottom: .75rem; }
+
+/* ===== Orbit 3-D Ring (logos stay visible front & back) ===== */
+.orbit3d{
+  --R: 260px;          /* orbit radius */
+  --spin: 18s;         /* revolution time */
+  perspective: 900px;
+  height: 300px;
+  margin: 48px auto;
+  position: relative;
+  max-width: 640px;
+}
+
+.orbit3d .ring{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  animation: ringSpin var(--spin) linear infinite; /* L → R spin */
+}
+
+/* Each orbiting logo tile — single source of truth */
+.orbit3d .item{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  isolation: isolate; /* predictable z-index for pseudo-elements */
+
+  /* Place on ring (no counter-rotate, so you see the back when it turns) */
+  transform: translate(-50%, -50%)
+             rotateY(var(--angle))
+             translateZ(var(--R));
+
+  width: 220px;
+  height: 220px;
+
+  /* Paint the logo via CSS variable set inline: --img: url('...') */
+  background-image: var(--img);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  backface-visibility: visible; /* keep visible at edge/back */
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Subtle back sheet so the “back” reads clearly */
+.orbit3d .item::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateZ(-1px) rotateY(180deg);
+  background: rgba(0,0,0,.12);
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+/* Glowing pad behind each logo */
+/*.orbit3d .item::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: 0 0 28px currentColor;
+  opacity: .85;
+  z-index: 1; /* under logo */
+/*}
+
+/* One accent color per slot (matches your order) */
+.orbit3d .item:nth-child(1){ color:#e74c3c; } /* red    */
+.orbit3d .item:nth-child(2){ color:#3498db; } /* blue   */
+.orbit3d .item:nth-child(3){ color:#2ecc71; } /* green  */
+.orbit3d .item:nth-child(4){ color:#f39c12; } /* orange */
+.orbit3d .item:nth-child(5){ color:#9b59b6; } /* purple */
+
+@keyframes ringSpin{
+  from { transform: translate(-50%, -50%) rotateY(0deg); }
+  to   { transform: translate(-50%, -50%) rotateY(360deg); }
+}
+
+/* Footer styling */
+.site-footer {
+  border-top: 0;
+  background: transparent;
+  margin-top: 60px;
+}
+
+.footer-contact {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.footer-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}

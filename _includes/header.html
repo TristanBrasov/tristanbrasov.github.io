@@ -1,0 +1,41 @@
+<!-- USING LOCAL HEADER -->
+<header class="site-header">
+  <div class="wrapper" style="text-align:center;">
+    <h1 class="site-title">{{ site.title | escape }}</h1>
+    <nav>
+      <ul style="display:flex;justify-content:center;gap:48px;list-style:none;padding:0;margin:0 0 22px;">
+        {% for path in site.header_pages %}
+          {% assign p = site.pages | where: "path", path | first %}
+          
+          {% if p.title == "Resume" %}
+            <!-- Direct link to resume PDF -->
+            <li>
+              <a href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank" rel="noopener" style="text-decoration:none;">
+                {{ p.title }}
+              </a>
+            </li>
+          
+          {% elsif p.title == "Projects" %}
+            <!-- Direct link to projects pdf -->
+            <li>
+              <a href="{{ '/assets/projects.pdf' | relative_url }}" target="_blank" rel="noopener" style="text-decoration:none;">
+                {{ p.title }}
+              </a>
+            </li>
+          
+          {% else %}
+            <!-- Normal internal link -->
+            <li>
+              <a href="{{ p.url | relative_url }}" style="text-decoration:none;">
+                {{ p.title }}
+              </a>
+            </li>
+          {% endif %}
+          
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
