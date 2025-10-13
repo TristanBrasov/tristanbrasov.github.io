@@ -12,7 +12,7 @@ permalink: /about/
 
 <div class="content-centered" markdown="1">
 
-## Software Skills
+## Tools I use to model, simulate, and validate aerodynamic systems:
 
 
 </div>
