@@ -10,6 +10,8 @@ permalink: /about/
   Exploring how fluids define flight
 </p>
 
+<hr class="section-divider">
+
 <div class="content-centered" markdown="1">
 
 ## Tools I use to model aerodynamic systems:
