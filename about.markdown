@@ -3,7 +3,12 @@ layout: default
 title: About Me
 permalink: /about/
 ---
-I am a first year CU Boulder MS student in the Aerospace Engineering Department. I focus on fluids and have a background in flight performance and configuration.
+<h2 style="text-align:center; font-weight:500; margin-top:20px;">
+  Aerospace Engineer | CU Boulder
+</h2>
+<p style="text-align:center; max-width:700px; margin:16px auto;">
+  Focused on fluid dynamics, flight performance, and aerodynamic systems.
+</p>
 
 <div class="content-centered" markdown="1">
 
