@@ -4,10 +4,10 @@ title: About Me
 permalink: /about/
 ---
 <h2 style="text-align:center; font-weight:500; margin-top:20px;">
-  Aerospace Engineer | CU Boulder
+  Aerospace Engineer w/ Focus on Fluids | University of Colorado - Boulder
 </h2>
 <p style="text-align:center; max-width:700px; margin:16px auto;">
-  Focused on fluid dynamics, flight performance, and aerodynamic systems.
+  Exploring how fluids define flight
 </p>
 
 <div class="content-centered" markdown="1">
