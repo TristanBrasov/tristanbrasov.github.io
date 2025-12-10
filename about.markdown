@@ -14,7 +14,7 @@ permalink: /about/
 
 <div class="content-centered" markdown="1">
 
-## Tools I use to model aerodynamic systems:
+## My software toolset:
 
 
 </div>
