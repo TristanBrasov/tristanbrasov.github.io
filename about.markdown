@@ -7,7 +7,7 @@ permalink: /about/
   Aerospace MS Student w/ Focus on Fluids | CU Boulder
 </h2>
 <p style="text-align:center; max-width:700px; margin:16px auto;">
-  Exploring how fluids define flight
+  Exploring the intersection of mechanical and aerospace engineering
 </p>
 
 <hr class="section-divider">
